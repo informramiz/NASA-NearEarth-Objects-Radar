@@ -35,7 +35,10 @@ class NASAAPIClient {
     }
     
     @discardableResult
-    class func taskForGetRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, successHandler: @escaping (_ response: ResponseType) -> Void, errorHandler: @escaping (_ error: Error) -> Void) -> URLSessionDataTask {
+    class func taskForGetRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type,
+                                                          successHandler: @escaping (_ response: ResponseType) -> Void,
+                                                          errorHandler: @escaping (_ error: Error) -> Void) -> URLSessionDataTask {
+        print("GET: \(url.absoluteString)")
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             handleResponse(data: data, error: error, responseType: responseType, successHandler: successHandler, errorHandler: errorHandler)
         }
@@ -55,6 +58,7 @@ class NASAAPIClient {
         }
         
         do {
+            print("Response: " + String(data: data, encoding: .utf8)!)
             let response = try JSONDecoder().decode(responseType, from: data)
             onMain {
                 successHandler(response)

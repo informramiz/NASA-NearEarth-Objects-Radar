@@ -9,7 +9,7 @@
 import Foundation
 struct CloseApproachData: Codable {
     let closeApproachDate: String
-    let closeApproachDateFull: String
+    let closeApproachDateFull: String?
     let epochDateCloseApproach: Int64
     let relativeVelocity: RelativeVelocity
     let missDistance: MissDistance
