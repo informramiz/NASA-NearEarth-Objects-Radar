@@ -20,6 +20,7 @@
 		182FAC0A241EC7BE00388F3D /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC09241EC7BE00388F3D /* Links.swift */; };
 		182FAC0C241EC7D400388F3D /* Asteriods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC0B241EC7D400388F3D /* Asteriods.swift */; };
 		182FAC0E241EC80000388F3D /* NASAAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC0D241EC80000388F3D /* NASAAPIClient.swift */; };
+		182FAC11241EDFD300388F3D /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC10241EDFD300388F3D /* FeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		182FAC09241EC7BE00388F3D /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		182FAC0B241EC7D400388F3D /* Asteriods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteriods.swift; sourceTree = "<group>"; };
 		182FAC0D241EC80000388F3D /* NASAAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAPIClient.swift; sourceTree = "<group>"; };
+		182FAC10241EDFD300388F3D /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		182FABFC241EC35100388F3D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				182FAC0F241EDFB900388F3D /* CustomViews */,
 				182FABED241E796A00388F3D /* Main.storyboard */,
 				182FABF2241E796C00388F3D /* LaunchScreen.storyboard */,
 			);
@@ -128,6 +131,14 @@
 				182FAC0B241EC7D400388F3D /* Asteriods.swift */,
 			);
 			path = NetworkResponses;
+			sourceTree = "<group>";
+		};
+		182FAC0F241EDFB900388F3D /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				182FAC10241EDFD300388F3D /* FeedTableViewCell.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 				182FABEA241E796A00388F3D /* SceneDelegate.swift in Sources */,
 				182FAC0E241EC80000388F3D /* NASAAPIClient.swift in Sources */,
 				182FAC0A241EC7BE00388F3D /* Links.swift in Sources */,
+				182FAC11241EDFD300388F3D /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
