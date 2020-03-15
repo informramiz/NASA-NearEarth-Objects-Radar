@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		182FABE8241E796A00388F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABE7241E796A00388F3D /* AppDelegate.swift */; };
 		182FABEA241E796A00388F3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABE9241E796A00388F3D /* SceneDelegate.swift */; };
-		182FABEC241E796A00388F3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABEB241E796A00388F3D /* ViewController.swift */; };
+		182FABEC241E796A00388F3D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABEB241E796A00388F3D /* FeedViewController.swift */; };
 		182FABEF241E796A00388F3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182FABED241E796A00388F3D /* Main.storyboard */; };
 		182FABF1241E796C00388F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182FABF0241E796C00388F3D /* Assets.xcassets */; };
 		182FABF4241E796C00388F3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182FABF2241E796C00388F3D /* LaunchScreen.storyboard */; };
@@ -26,7 +26,7 @@
 		182FABE4241E796A00388F3D /* NASA-NeoWs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-NeoWs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		182FABE7241E796A00388F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		182FABE9241E796A00388F3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		182FABEB241E796A00388F3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		182FABEB241E796A00388F3D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		182FABEE241E796A00388F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		182FABF0241E796C00388F3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182FABF3241E796C00388F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		182FABFD241EC35700388F3D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				182FABEB241E796A00388F3D /* ViewController.swift */,
+				182FABEB241E796A00388F3D /* FeedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 				182FAC06241EC78F00388F3D /* CloseApproachData.swift in Sources */,
 				182FAC0C241EC7D400388F3D /* Asteriods.swift in Sources */,
 				182FAC02241EC5E700388F3D /* RelativeVelocity.swift in Sources */,
-				182FABEC241E796A00388F3D /* ViewController.swift in Sources */,
+				182FABEC241E796A00388F3D /* FeedViewController.swift in Sources */,
 				182FAC04241EC60400388F3D /* MissDistance.swift in Sources */,
 				182FABE8241E796A00388F3D /* AppDelegate.swift in Sources */,
 				182FAC08241EC7A400388F3D /* Asteriod.swift in Sources */,
