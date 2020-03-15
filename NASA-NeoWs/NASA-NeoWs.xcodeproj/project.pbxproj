@@ -13,6 +13,13 @@
 		182FABEF241E796A00388F3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182FABED241E796A00388F3D /* Main.storyboard */; };
 		182FABF1241E796C00388F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182FABF0241E796C00388F3D /* Assets.xcassets */; };
 		182FABF4241E796C00388F3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182FABF2241E796C00388F3D /* LaunchScreen.storyboard */; };
+		182FAC02241EC5E700388F3D /* RelativeVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC01241EC5E700388F3D /* RelativeVelocity.swift */; };
+		182FAC04241EC60400388F3D /* MissDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC03241EC60300388F3D /* MissDistance.swift */; };
+		182FAC06241EC78F00388F3D /* CloseApproachData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC05241EC78F00388F3D /* CloseApproachData.swift */; };
+		182FAC08241EC7A400388F3D /* Asteriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC07241EC7A400388F3D /* Asteriod.swift */; };
+		182FAC0A241EC7BE00388F3D /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC09241EC7BE00388F3D /* Links.swift */; };
+		182FAC0C241EC7D400388F3D /* Asteriods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC0B241EC7D400388F3D /* Asteriods.swift */; };
+		182FAC0E241EC80000388F3D /* NASAAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC0D241EC80000388F3D /* NASAAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +32,13 @@
 		182FABF3241E796C00388F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182FABF5241E796C00388F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182FABFF241EC3CA00388F3D /* FeedApiJsonParsing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FeedApiJsonParsing.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		182FAC01241EC5E700388F3D /* RelativeVelocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeVelocity.swift; sourceTree = "<group>"; };
+		182FAC03241EC60300388F3D /* MissDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissDistance.swift; sourceTree = "<group>"; };
+		182FAC05241EC78F00388F3D /* CloseApproachData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseApproachData.swift; sourceTree = "<group>"; };
+		182FAC07241EC7A400388F3D /* Asteriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteriod.swift; sourceTree = "<group>"; };
+		182FAC09241EC7BE00388F3D /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		182FAC0B241EC7D400388F3D /* Asteriods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteriods.swift; sourceTree = "<group>"; };
+		182FAC0D241EC80000388F3D /* NASAAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +85,9 @@
 		182FABFB241EC34A00388F3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				182FAC00241EC5BA00388F3D /* NetworkResponses */,
 				182FABFE241EC38200388F3D /* Playgrounds */,
+				182FAC0D241EC80000388F3D /* NASAAPIClient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +115,19 @@
 				182FABFF241EC3CA00388F3D /* FeedApiJsonParsing.playground */,
 			);
 			path = Playgrounds;
+			sourceTree = "<group>";
+		};
+		182FAC00241EC5BA00388F3D /* NetworkResponses */ = {
+			isa = PBXGroup;
+			children = (
+				182FAC01241EC5E700388F3D /* RelativeVelocity.swift */,
+				182FAC03241EC60300388F3D /* MissDistance.swift */,
+				182FAC05241EC78F00388F3D /* CloseApproachData.swift */,
+				182FAC07241EC7A400388F3D /* Asteriod.swift */,
+				182FAC09241EC7BE00388F3D /* Links.swift */,
+				182FAC0B241EC7D400388F3D /* Asteriods.swift */,
+			);
+			path = NetworkResponses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,9 +201,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182FAC06241EC78F00388F3D /* CloseApproachData.swift in Sources */,
+				182FAC0C241EC7D400388F3D /* Asteriods.swift in Sources */,
+				182FAC02241EC5E700388F3D /* RelativeVelocity.swift in Sources */,
 				182FABEC241E796A00388F3D /* ViewController.swift in Sources */,
+				182FAC04241EC60400388F3D /* MissDistance.swift in Sources */,
 				182FABE8241E796A00388F3D /* AppDelegate.swift in Sources */,
+				182FAC08241EC7A400388F3D /* Asteriod.swift in Sources */,
 				182FABEA241E796A00388F3D /* SceneDelegate.swift in Sources */,
+				182FAC0E241EC80000388F3D /* NASAAPIClient.swift in Sources */,
+				182FAC0A241EC7BE00388F3D /* Links.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
