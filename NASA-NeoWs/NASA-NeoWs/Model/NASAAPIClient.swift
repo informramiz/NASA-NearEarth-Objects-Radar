@@ -26,17 +26,21 @@ class NASAAPIClient {
         }
     }
     
+    @discardableResult
     class func getAsteriodFeed(startDate: String? = nil, endData: String? = nil,
                                successHandler: @escaping (_ asteriods: Asteriods) -> Void,
-                               errorHandler: @escaping (_ error: Error) -> Void) {
-        taskForGetRequest(url: EndPoints.getFeed(startDate: startDate, endDate: endData).url, responseType: Asteriods.self,
+                               errorHandler: @escaping (_ error: Error) -> Void) -> URLSessionDataTask {
+        return taskForGetRequest(url: EndPoints.getFeed(startDate: startDate, endDate: endData).url, responseType: Asteriods.self,
                           successHandler: successHandler, errorHandler: errorHandler)
     }
     
-    class func taskForGetRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, successHandler: @escaping (_ response: ResponseType) -> Void, errorHandler: @escaping (_ error: Error) -> Void) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
+    @discardableResult
+    class func taskForGetRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, successHandler: @escaping (_ response: ResponseType) -> Void, errorHandler: @escaping (_ error: Error) -> Void) -> URLSessionDataTask {
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
             handleResponse(data: data, error: error, responseType: responseType, successHandler: successHandler, errorHandler: errorHandler)
         }
+        task.resume()
+        return task
     }
     
     class func handleResponse<ResponseType: Decodable>(data: Data?, error: Error?, responseType: ResponseType.Type,
