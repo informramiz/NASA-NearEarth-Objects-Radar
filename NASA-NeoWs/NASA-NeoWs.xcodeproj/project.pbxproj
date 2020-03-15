@@ -24,6 +24,7 @@
 		182FABF0241E796C00388F3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182FABF3241E796C00388F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182FABF5241E796C00388F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		182FABFF241EC3CA00388F3D /* FeedApiJsonParsing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FeedApiJsonParsing.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +57,48 @@
 		182FABE6241E796A00388F3D /* NASA-NeoWs */ = {
 			isa = PBXGroup;
 			children = (
+				182FABFD241EC35700388F3D /* Controller */,
+				182FABFC241EC35100388F3D /* View */,
+				182FABFB241EC34A00388F3D /* Model */,
 				182FABE7241E796A00388F3D /* AppDelegate.swift */,
 				182FABE9241E796A00388F3D /* SceneDelegate.swift */,
-				182FABEB241E796A00388F3D /* ViewController.swift */,
-				182FABED241E796A00388F3D /* Main.storyboard */,
 				182FABF0241E796C00388F3D /* Assets.xcassets */,
-				182FABF2241E796C00388F3D /* LaunchScreen.storyboard */,
 				182FABF5241E796C00388F3D /* Info.plist */,
 			);
 			path = "NASA-NeoWs";
+			sourceTree = "<group>";
+		};
+		182FABFB241EC34A00388F3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				182FABFE241EC38200388F3D /* Playgrounds */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		182FABFC241EC35100388F3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				182FABED241E796A00388F3D /* Main.storyboard */,
+				182FABF2241E796C00388F3D /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		182FABFD241EC35700388F3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				182FABEB241E796A00388F3D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		182FABFE241EC38200388F3D /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				182FABFF241EC3CA00388F3D /* FeedApiJsonParsing.playground */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
