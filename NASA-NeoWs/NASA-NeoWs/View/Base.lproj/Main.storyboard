@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search-->
+        <!--View Controller-->
         <scene sceneID="AJs-Lh-BJb">
             <objects>
                 <viewController id="s40-Tc-5fo" sceneMemberID="viewController">
@@ -17,13 +17,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="k2H-EY-qrP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="mfL-ls-RPl"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="mfL-ls-RPl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhe-Ju-SNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2701" y="417"/>
         </scene>
-        <!--Feed-->
+        <!--Feed View Controller-->
         <scene sceneID="NIj-AR-qna">
             <objects>
                 <viewController id="MWn-PC-P8o" customClass="FeedViewController" customModule="NASA_NeoWs" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Itd-kA-9vh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" id="4wi-rm-NsY"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="4wi-rm-NsY"/>
                     <connections>
                         <outlet property="tableView" destination="sTH-NJ-NLn" id="88n-ae-jgG"/>
                     </connections>
@@ -86,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="2701" y="-231"/>
         </scene>
-        <!--Search-->
+        <!--Table View Controller-->
         <scene sceneID="XIO-SR-osh">
             <objects>
                 <tableViewController id="sL6-I7-SE4" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
                             <outlet property="delegate" destination="sL6-I7-SE4" id="zt7-q1-9kd"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Search" id="2fp-Mh-IIT"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="2fp-Mh-IIT"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhH-mi-Nqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
