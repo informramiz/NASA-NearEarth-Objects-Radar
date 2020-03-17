@@ -115,11 +115,11 @@
             </objects>
             <point key="canvasLocation" x="3649" y="64"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Near Earth Objects-->
         <scene sceneID="5Qz-7g-KR0">
             <objects>
                 <tabBarController id="yBz-lq-oYP" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Ocg-vc-odu"/>
+                    <navigationItem key="navigationItem" title="Near Earth Objects" id="Ocg-vc-odu"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aFK-eW-rSE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
