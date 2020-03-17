@@ -67,6 +67,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="vUP-db-CUU">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -74,11 +78,14 @@
                             <constraint firstItem="Itd-kA-9vh" firstAttribute="trailing" secondItem="sTH-NJ-NLn" secondAttribute="trailing" id="8iM-EE-3uD"/>
                             <constraint firstItem="sTH-NJ-NLn" firstAttribute="leading" secondItem="Itd-kA-9vh" secondAttribute="leading" id="Fea-9Q-hCd"/>
                             <constraint firstItem="sTH-NJ-NLn" firstAttribute="top" secondItem="Itd-kA-9vh" secondAttribute="top" id="UjI-1j-COE"/>
+                            <constraint firstItem="vUP-db-CUU" firstAttribute="centerY" secondItem="RiS-QB-cOS" secondAttribute="centerY" id="mcy-eC-9JL"/>
+                            <constraint firstItem="vUP-db-CUU" firstAttribute="centerX" secondItem="RiS-QB-cOS" secondAttribute="centerX" id="seo-Ec-KA5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Itd-kA-9vh"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="mostRecent" id="4wi-rm-NsY"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="vUP-db-CUU" id="aYC-rr-acE"/>
                         <outlet property="tableView" destination="sTH-NJ-NLn" id="88n-ae-jgG"/>
                     </connections>
                 </viewController>

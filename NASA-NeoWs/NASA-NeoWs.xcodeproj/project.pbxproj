@@ -101,6 +101,7 @@
 		182FABFC241EC35100388F3D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				182FAC172421745D00388F3D /* extensions */,
 				182FAC0F241EDFB900388F3D /* CustomViews */,
 				182FABED241E796A00388F3D /* Main.storyboard */,
 				182FABF2241E796C00388F3D /* LaunchScreen.storyboard */,
@@ -153,6 +154,13 @@
 				182FAC15241EE37300388F3D /* Date+Extras.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		182FAC172421745D00388F3D /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

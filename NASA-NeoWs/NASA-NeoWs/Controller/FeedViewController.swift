@@ -10,6 +10,7 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var asteriods: Asteriods? = nil
     var sectionIndexToDateMapping: [String] = []
     
@@ -21,12 +22,15 @@ class FeedViewController: UIViewController, UITableViewDataSource {
     }
 
     private func loadFeed() {
+        activityIndicator.startAnimating()
         NASAAPIClient.getAsteriodFeed(successHandler: { asteriods in
             self.asteriods = asteriods
             self.mapSections()
             self.tableView.reloadData()
+            self.activityIndicator.stopAnimating()
         }) { error in
             self.showErrorAlert(message: error.localizedDescription)
+            self.activityIndicator.stopAnimating()
         }
     }
     
