@@ -62,6 +62,10 @@ class FeedViewController: UIViewController, UITableViewDataSource {
         return tableViewCell
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionIndexToDateMapping[section]
+    }
+    
     private func rowAt(_ indexPath: IndexPath) -> Asteriod {
         let sectionKey = sectionIndexToDateMapping[indexPath.section]
         return asteriods!.nearEarthObjects[sectionKey]![indexPath.row]
