@@ -19,6 +19,7 @@ class FeedViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         loadFeed()
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
     private func loadFeed() {
@@ -76,3 +77,8 @@ class FeedViewController: UIViewController, UITableViewDataSource {
     }
 }
 
+extension FeedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
