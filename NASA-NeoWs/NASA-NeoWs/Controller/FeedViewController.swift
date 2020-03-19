@@ -75,10 +75,19 @@ class FeedViewController: UIViewController, UITableViewDataSource {
         let sectionKey = sectionIndexToDateMapping[indexPath.section]
         return asteriods!.nearEarthObjects[sectionKey]![indexPath.row]
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.asteriod = (sender as! Asteriod)
+        }
+    }
 }
 
 extension FeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
+        let row = rowAt(indexPath)
+        performSegue(withIdentifier: "ShowDetail", sender: row)
     }
 }

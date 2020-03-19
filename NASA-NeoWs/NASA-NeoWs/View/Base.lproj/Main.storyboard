@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="2701" y="417"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Asteriod Detail-->
         <scene sceneID="NIj-AR-qna">
             <objects>
-                <viewController id="MWn-PC-P8o" customClass="FeedViewController" customModule="NASA_NeoWs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Asteriod Detail" id="MWn-PC-P8o" customClass="FeedViewController" customModule="NASA_NeoWs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RiS-QB-cOS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,6 +86,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="vUP-db-CUU" id="aYC-rr-acE"/>
                         <outlet property="tableView" destination="sTH-NJ-NLn" id="88n-ae-jgG"/>
+                        <segue destination="kSl-QG-bXQ" kind="show" identifier="ShowDetail" id="Uq2-0M-I9f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVX-ye-BtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -120,6 +121,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhH-mi-Nqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3649" y="64"/>
+        </scene>
+        <!--Asteriod Detail-->
+        <scene sceneID="iXo-Dd-2Jt">
+            <objects>
+                <viewController title="Asteriod Detail" id="kSl-QG-bXQ" customClass="DetailViewController" customModule="NASA_NeoWs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TPi-g4-w8C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="24l-UJ-tbU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Asteriod Detail" id="6lt-2S-bzj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6FY-u1-mgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4906" y="42"/>
         </scene>
         <!--Near Earth Objects-->
         <scene sceneID="5Qz-7g-KR0">
