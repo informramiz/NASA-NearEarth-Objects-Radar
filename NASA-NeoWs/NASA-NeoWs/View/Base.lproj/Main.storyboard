@@ -129,14 +129,67 @@
                     <view key="view" contentMode="scaleToFill" id="TPi-g4-w8C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmB-Z7-lYa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQx-8L-rGE">
+                                        <rect key="frame" x="0.0" y="100" width="414" height="607"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ibO-iz-VBK" userLabel="Text View1">
+                                                <rect key="frame" x="20" y="20" width="374" height="183.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J4m-We-wLY" userLabel="Text View2">
+                                                <rect key="frame" x="20" y="403.5" width="374" height="183.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="J4m-We-wLY" secondAttribute="trailing" constant="20" id="8Aj-E9-njq"/>
+                                            <constraint firstItem="J4m-We-wLY" firstAttribute="top" secondItem="ibO-iz-VBK" secondAttribute="bottom" constant="200" id="DB8-ze-XMV"/>
+                                            <constraint firstItem="ibO-iz-VBK" firstAttribute="top" secondItem="OQx-8L-rGE" secondAttribute="top" constant="20" id="ROH-Gq-9hT"/>
+                                            <constraint firstItem="J4m-We-wLY" firstAttribute="leading" secondItem="OQx-8L-rGE" secondAttribute="leading" constant="20" id="Slo-UR-W4p"/>
+                                            <constraint firstAttribute="trailing" secondItem="ibO-iz-VBK" secondAttribute="trailing" constant="20" id="b2L-wL-0e6"/>
+                                            <constraint firstItem="ibO-iz-VBK" firstAttribute="leading" secondItem="OQx-8L-rGE" secondAttribute="leading" constant="20" id="dNp-jc-8CB"/>
+                                            <constraint firstAttribute="bottom" secondItem="J4m-We-wLY" secondAttribute="bottom" constant="20" id="qlH-7L-4bO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OQx-8L-rGE" secondAttribute="bottom" constant="400" id="GKW-D0-vFc"/>
+                                    <constraint firstItem="OQx-8L-rGE" firstAttribute="top" secondItem="DmB-Z7-lYa" secondAttribute="top" constant="100" id="Z8k-Jb-VRt"/>
+                                    <constraint firstAttribute="trailing" secondItem="OQx-8L-rGE" secondAttribute="trailing" id="boT-Uv-QOg"/>
+                                    <constraint firstItem="OQx-8L-rGE" firstAttribute="width" secondItem="DmB-Z7-lYa" secondAttribute="width" id="iNJ-kG-Qm5"/>
+                                    <constraint firstItem="OQx-8L-rGE" firstAttribute="leading" secondItem="DmB-Z7-lYa" secondAttribute="leading" id="jFy-G4-ufq"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="l7L-Dm-FSI"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="nm1-cW-nnq"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="24l-UJ-tbU" firstAttribute="trailing" secondItem="DmB-Z7-lYa" secondAttribute="trailing" id="LFd-hz-ERb"/>
+                            <constraint firstItem="24l-UJ-tbU" firstAttribute="bottom" secondItem="DmB-Z7-lYa" secondAttribute="bottom" id="cqK-Cl-far"/>
+                            <constraint firstItem="DmB-Z7-lYa" firstAttribute="top" secondItem="24l-UJ-tbU" secondAttribute="top" id="nyg-js-YkJ"/>
+                            <constraint firstItem="DmB-Z7-lYa" firstAttribute="leading" secondItem="24l-UJ-tbU" secondAttribute="leading" id="w9F-Jb-HhA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="24l-UJ-tbU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Asteriod Detail" id="6lt-2S-bzj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FY-u1-mgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4906" y="42"/>
+            <point key="canvasLocation" x="4905.7971014492759" y="41.517857142857139"/>
         </scene>
         <!--Near Earth Objects-->
         <scene sceneID="5Qz-7g-KR0">
