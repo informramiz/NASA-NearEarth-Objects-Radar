@@ -24,7 +24,6 @@
 		182FAC14241EE2B700388F3D /* UIViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC13241EE2B700388F3D /* UIViewController+Extras.swift */; };
 		182FAC16241EE37300388F3D /* Date+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC15241EE37300388F3D /* Date+Extras.swift */; };
 		182FAC1B2422CB8A00388F3D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC1A2422CB8A00388F3D /* DetailViewController.swift */; };
-		18450D6A2427ECAD0022F60C /* Dictionary+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18450D692427ECAD0022F60C /* Dictionary+Extras.swift */; };
 		18450D6C242827D90022F60C /* EstimatedDiameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18450D6B242827D90022F60C /* EstimatedDiameter.swift */; };
 		18450D6E242828490022F60C /* Diameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18450D6D242828490022F60C /* Diameter.swift */; };
 /* End PBXBuildFile section */
@@ -50,7 +49,6 @@
 		182FAC13241EE2B700388F3D /* UIViewController+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extras.swift"; sourceTree = "<group>"; };
 		182FAC15241EE37300388F3D /* Date+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extras.swift"; sourceTree = "<group>"; };
 		182FAC1A2422CB8A00388F3D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		18450D692427ECAD0022F60C /* Dictionary+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extras.swift"; sourceTree = "<group>"; };
 		18450D6B242827D90022F60C /* EstimatedDiameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedDiameter.swift; sourceTree = "<group>"; };
 		18450D6D242828490022F60C /* Diameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,7 +168,6 @@
 		182FAC172421745D00388F3D /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				18450D692427ECAD0022F60C /* Dictionary+Extras.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -255,7 +252,6 @@
 				182FABE8241E796A00388F3D /* AppDelegate.swift in Sources */,
 				182FAC08241EC7A400388F3D /* Asteriod.swift in Sources */,
 				182FAC14241EE2B700388F3D /* UIViewController+Extras.swift in Sources */,
-				18450D6A2427ECAD0022F60C /* Dictionary+Extras.swift in Sources */,
 				182FABEA241E796A00388F3D /* SceneDelegate.swift in Sources */,
 				182FAC0E241EC80000388F3D /* NASAAPIClient.swift in Sources */,
 				182FAC0A241EC7BE00388F3D /* Links.swift in Sources */,
