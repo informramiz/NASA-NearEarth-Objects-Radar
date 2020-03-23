@@ -186,6 +186,10 @@
                         <viewLayoutGuide key="safeArea" id="24l-UJ-tbU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Asteriod Detail" id="6lt-2S-bzj"/>
+                    <connections>
+                        <outlet property="primaryDataText" destination="ibO-iz-VBK" id="Gkr-9z-sOP"/>
+                        <outlet property="secondaryDataTextView" destination="J4m-We-wLY" id="sk0-HK-iIK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FY-u1-mgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

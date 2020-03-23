@@ -10,11 +10,18 @@ import UIKit
 
 class DetailViewController: UIViewController {
     var asteriod: Asteriod!
-
+    @IBOutlet weak var primaryDataText: UITextView!
+    @IBOutlet weak var secondaryDataTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = asteriod.name
         // Do any additional setup after loading the view.
+        primaryDataText.attributedText = asteriod.primaryDataAttributedString
+        primaryDataText.isEditable = false
+      
+        secondaryDataTextView.attributedText = asteriod.secondaryDataAttributedString
+        secondaryDataTextView.isEditable = false
     }
     
 
