@@ -97,6 +97,7 @@
 		182FABFB241EC34A00388F3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				186506AE2429857A00DD6043 /* Extensions */,
 				182FAC00241EC5BA00388F3D /* NetworkResponses */,
 				182FABFE241EC38200388F3D /* Playgrounds */,
 				182FAC0D241EC80000388F3D /* NASAAPIClient.swift */,
@@ -107,7 +108,7 @@
 		182FABFC241EC35100388F3D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				182FAC172421745D00388F3D /* extensions */,
+				182FAC172421745D00388F3D /* Extensions */,
 				182FAC0F241EDFB900388F3D /* CustomViews */,
 				182FABED241E796A00388F3D /* Main.storyboard */,
 				182FABF2241E796C00388F3D /* LaunchScreen.storyboard */,
@@ -165,11 +166,18 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		182FAC172421745D00388F3D /* extensions */ = {
+		182FAC172421745D00388F3D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = extensions;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		186506AE2429857A00DD6043 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

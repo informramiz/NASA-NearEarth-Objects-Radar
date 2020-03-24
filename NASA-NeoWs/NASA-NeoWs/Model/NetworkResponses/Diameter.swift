@@ -17,6 +17,6 @@ struct Diameter: Codable {
     }
     
     func toString() -> String {
-        return String(format: "Min: %.2f \tMax: %.2f", minEstimatedDiameter, maxEstimatedDiameter)
+        return String(format: "Min: %.2f - Max: %.2f", minEstimatedDiameter, maxEstimatedDiameter)
     }
 }

@@ -31,6 +31,9 @@ struct Asteriod: Codable {
         case isSentryObject = "is_sentry_object"
     }
     
+    static let keyTextAttrs: [NSAttributedString.Key:Any] = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+    static let valueTextAttrs: [NSAttributedString.Key:Any] = [NSAttributedString.Key.foregroundColor: UIColor.gray]
+    
     var primaryDataAttributedString: NSAttributedString {
         let text: NSMutableAttributedString = NSMutableAttributedString()
         text.append(toAttributedString(key: "Name", value: name))
@@ -44,20 +47,21 @@ struct Asteriod: Codable {
     var secondaryDataAttributedString: NSAttributedString {
         let text: NSMutableAttributedString = NSMutableAttributedString()
         text.append(toAttributedString(key: "Estimated Diameter", value: estimatedDiameter.toString()))
-        text.append(toAttributedString(key: "Approach Date", value: closeApproachData[0].closeApproachDate))
+        if !closeApproachData.isEmpty {
+            text.append(closeApproachData[0].toString(keyAttrs: Asteriod.keyTextAttrs, valueAttrs: Asteriod.valueTextAttrs))
+        }
         return text
     }
     
     private func toAttributedString(key: String, value: String, link: String? = nil) -> NSAttributedString {
+        var valueTextAttrs: [NSAttributedString.Key:Any] = Asteriod.valueTextAttrs
         let text: NSMutableAttributedString = NSMutableAttributedString()
-        let keyTextAttrs: [NSAttributedString.Key:Any] = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
-        var valueTextAttrs: [NSAttributedString.Key:Any] = [NSAttributedString.Key.foregroundColor: UIColor.gray]
         if link != nil {
             valueTextAttrs[NSAttributedString.Key.link] = link
         }
         
         
-        text.append(NSAttributedString(string: "\(key): ", attributes: keyTextAttrs))
+        text.append(NSAttributedString(string: "\(key): ", attributes: Asteriod.keyTextAttrs))
         text.append(NSAttributedString(string: "\t\(value)\n", attributes: valueTextAttrs))
         return text
     }

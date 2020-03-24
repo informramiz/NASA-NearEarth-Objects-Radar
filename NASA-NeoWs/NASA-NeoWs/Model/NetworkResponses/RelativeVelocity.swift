@@ -18,4 +18,8 @@ struct RelativeVelocity: Codable {
         case kmPerHour = "kilometers_per_hour"
         case milesPerHour = "miles_per_hour"
     }
+    
+    func toString() -> String {
+        return String(format: "%.2f kilometers/hour", Double(kmPerHour)!)
+    }
 }

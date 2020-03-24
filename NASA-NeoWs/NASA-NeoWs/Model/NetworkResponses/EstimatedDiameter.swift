@@ -11,6 +11,6 @@ struct EstimatedDiameter: Codable {
     let kilometers: Diameter
     
     func toString() -> String {
-        return kilometers.toString()
+        return "[\(kilometers.toString())]" + " kilometers"
     }
 }

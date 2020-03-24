@@ -13,4 +13,8 @@ struct MissDistance: Codable {
     let lunar: String
     let kilometers: String
     let miles: String
+    
+    func toString() -> String {
+        return String(format: "%.2f kilometers", Double(kilometers)!)
+    }
 }
