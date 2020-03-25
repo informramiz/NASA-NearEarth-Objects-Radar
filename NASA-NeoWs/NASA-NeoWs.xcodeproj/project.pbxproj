@@ -68,6 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1813A000242B1DC70031F0F3 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				182FAC00241EC5BA00388F3D /* NetworkResponses */,
+				182FABFE241EC38200388F3D /* Playgrounds */,
+				182FAC0D241EC80000388F3D /* NASAAPIClient.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		182FABDB241E796A00388F3D = {
 			isa = PBXGroup;
 			children = (
@@ -87,11 +97,11 @@
 		182FABE6241E796A00388F3D /* NASA-NeoWs */ = {
 			isa = PBXGroup;
 			children = (
+				182FABE7241E796A00388F3D /* AppDelegate.swift */,
+				182FABE9241E796A00388F3D /* SceneDelegate.swift */,
 				182FABFD241EC35700388F3D /* Controller */,
 				182FABFC241EC35100388F3D /* View */,
 				182FABFB241EC34A00388F3D /* Model */,
-				182FABE7241E796A00388F3D /* AppDelegate.swift */,
-				182FABE9241E796A00388F3D /* SceneDelegate.swift */,
 				182FABF0241E796C00388F3D /* Assets.xcassets */,
 				182FABF5241E796C00388F3D /* Info.plist */,
 			);
@@ -101,10 +111,8 @@
 		182FABFB241EC34A00388F3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1813A000242B1DC70031F0F3 /* Remote */,
 				186506AE2429857A00DD6043 /* Extensions */,
-				182FAC00241EC5BA00388F3D /* NetworkResponses */,
-				182FABFE241EC38200388F3D /* Playgrounds */,
-				182FAC0D241EC80000388F3D /* NASAAPIClient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
