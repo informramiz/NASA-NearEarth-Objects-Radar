@@ -8,8 +8,8 @@
 
 import Foundation
 struct Links: Codable {
-    let prev: String
-    let next: String
+    let prev: String?
+    let next: String?
     let current: String
     
     enum CodingKeys: String, CodingKey {

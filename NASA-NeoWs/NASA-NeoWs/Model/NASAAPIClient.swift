@@ -11,13 +11,17 @@ class NASAAPIClient {
     static let apiKey = "cmPeNpKaH2oeNUfqFhfnWenrwMk6fBe3q9E09fSu"
     
     enum EndPoints {
-        static let baseUrl = "https://api.nasa.gov/neo/rest/v1/feed?api_key=\(NASAAPIClient.apiKey)"
+        static let baseUrl = "https://api.nasa.gov/neo/rest/v1/"
+        static let apiKey = "api_key=\(NASAAPIClient.apiKey)"
         case getFeed(startDate: String?, endDate: String?)
+        case search(neoReferenceId: String)
         
         var stringValue: String {
             switch self {
             case .getFeed(let startDate, let endDate):
-                return EndPoints.baseUrl + "&start_date=\(startDate ?? "")&end_date=\(endDate ?? "")"
+                return EndPoints.baseUrl + "feed?&start_date=\(startDate ?? "")&end_date=\(endDate ?? "")" + EndPoints.apiKey
+                case .search(let neoReferenceId):
+                    return EndPoints.baseUrl + "neo/\(neoReferenceId)?" + EndPoints.apiKey
             }
         }
         
