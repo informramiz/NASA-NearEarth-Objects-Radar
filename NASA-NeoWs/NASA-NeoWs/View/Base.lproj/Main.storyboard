@@ -7,26 +7,95 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="AJs-Lh-BJb">
             <objects>
-                <viewController id="s40-Tc-5fo" sceneMemberID="viewController">
+                <viewController id="s40-Tc-5fo" customClass="SearchViewController" customModule="NASA_NeoWs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="grf-un-ERX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="EDN-82-NSr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r27-9u-7yx">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedTableViewCell" textLabel="8lR-i6-uvp" detailTextLabel="5JM-U2-bht" style="IBUITableViewCellStyleSubtitle" id="f59-Ru-aJx" customClass="FeedTableViewCell" customModule="NASA_NeoWs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f59-Ru-aJx" id="r1m-QS-xQ7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8lR-i6-uvp">
+                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5JM-U2-bht">
+                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="subtitle" destination="5JM-U2-bht" id="6aa-Ku-EdY"/>
+                                            <outlet property="title" destination="8lR-i6-uvp" id="W9f-uB-V0B"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3Fc-T8-FLI">
+                                <rect key="frame" x="188" y="429" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2k-Ul-Tee">
+                                <rect key="frame" x="139.5" y="468" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="r27-9u-7yx" firstAttribute="leading" secondItem="k2H-EY-qrP" secondAttribute="leading" id="63w-dt-h04"/>
+                            <constraint firstItem="k2H-EY-qrP" firstAttribute="trailing" secondItem="r27-9u-7yx" secondAttribute="trailing" id="DrJ-CW-hUq"/>
+                            <constraint firstItem="L2k-Ul-Tee" firstAttribute="centerY" secondItem="r27-9u-7yx" secondAttribute="centerY" id="FC5-bK-ROJ"/>
+                            <constraint firstItem="EDN-82-NSr" firstAttribute="trailing" secondItem="k2H-EY-qrP" secondAttribute="trailing" id="Mn5-29-cKK"/>
+                            <constraint firstItem="EDN-82-NSr" firstAttribute="top" secondItem="k2H-EY-qrP" secondAttribute="top" id="c98-9r-mVe"/>
+                            <constraint firstItem="r27-9u-7yx" firstAttribute="top" secondItem="EDN-82-NSr" secondAttribute="bottom" id="cYF-sF-d1A"/>
+                            <constraint firstItem="EDN-82-NSr" firstAttribute="leading" secondItem="k2H-EY-qrP" secondAttribute="leading" id="d8A-PW-eBa"/>
+                            <constraint firstItem="L2k-Ul-Tee" firstAttribute="centerX" secondItem="r27-9u-7yx" secondAttribute="centerX" id="fHL-7V-uC3"/>
+                            <constraint firstItem="k2H-EY-qrP" firstAttribute="bottom" secondItem="r27-9u-7yx" secondAttribute="bottom" id="vz5-RH-EA2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="k2H-EY-qrP"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="mfL-ls-RPl"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="3Fc-T8-FLI" id="cot-Jp-apW"/>
+                        <outlet property="noResultsFoundLabel" destination="L2k-Ul-Tee" id="jJd-Xm-JcQ"/>
+                        <outlet property="searchBar" destination="EDN-82-NSr" id="2fo-Az-Vae"/>
+                        <outlet property="tableview" destination="r27-9u-7yx" id="U44-fS-ZaX"/>
+                        <segue destination="kSl-QG-bXQ" kind="show" identifier="ShowDetail" id="TJ6-Zc-wdl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhe-Ju-SNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2701" y="417"/>
         </scene>
-        <!--Asteriod Detail-->
+        <!--Feed View Controller-->
         <scene sceneID="NIj-AR-qna">
             <objects>
-                <viewController title="Asteriod Detail" id="MWn-PC-P8o" customClass="FeedViewController" customModule="NASA_NeoWs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Asteriod Detail" id="MWn-PC-P8o" userLabel="Feed View Controller" customClass="FeedViewController" customModule="NASA_NeoWs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RiS-QB-cOS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,7 +318,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eib-xk-4AE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+            <point key="canvasLocation" x="817" y="92"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TJ6-Zc-wdl"/>
+    </inferredMetricsTieBreakers>
 </document>

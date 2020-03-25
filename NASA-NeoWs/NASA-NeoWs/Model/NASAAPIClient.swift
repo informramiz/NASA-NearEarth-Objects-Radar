@@ -14,12 +14,12 @@ class NASAAPIClient {
         static let baseUrl = "https://api.nasa.gov/neo/rest/v1/"
         static let apiKey = "api_key=\(NASAAPIClient.apiKey)"
         case getFeed(startDate: String?, endDate: String?)
-        case search(neoReferenceId: String)
+        case search(neoReferenceId: Int64)
         
         var stringValue: String {
             switch self {
             case .getFeed(let startDate, let endDate):
-                return EndPoints.baseUrl + "feed?&start_date=\(startDate ?? "")&end_date=\(endDate ?? "")" + EndPoints.apiKey
+                return EndPoints.baseUrl + "feed?&start_date=\(startDate ?? "")&end_date=\(endDate ?? "")&" + EndPoints.apiKey
                 case .search(let neoReferenceId):
                     return EndPoints.baseUrl + "neo/\(neoReferenceId)?" + EndPoints.apiKey
             }
@@ -30,10 +30,20 @@ class NASAAPIClient {
         }
     }
     
+    class func search(neoReferenceId: Int64,
+                      successHandler: @escaping (_ asteriods: [Asteriod]) -> Void,
+                      errorHandler: @escaping (_ error: Error) -> Void) -> URLSessionTask {
+        return taskForGetRequest(url: EndPoints.search(neoReferenceId: neoReferenceId).url,
+                          responseType: Asteriod.self,
+                          successHandler: { data in
+                            successHandler([data])
+                            },errorHandler: errorHandler)
+    }
+    
     @discardableResult
     class func getAsteriodFeed(startDate: String? = nil, endData: String? = nil,
                                successHandler: @escaping (_ asteriods: Asteriods) -> Void,
-                               errorHandler: @escaping (_ error: Error) -> Void) -> URLSessionDataTask {
+                               errorHandler: @escaping (_ error: Error) -> Void) -> URLSessionTask {
         return taskForGetRequest(url: EndPoints.getFeed(startDate: startDate, endDate: endData).url, responseType: Asteriods.self,
                           successHandler: successHandler, errorHandler: errorHandler)
     }
@@ -56,7 +66,6 @@ class NASAAPIClient {
         guard let data = data else {
             onMain {
                 errorHandler(error!)
-                
             }
             return
         }
@@ -68,7 +77,18 @@ class NASAAPIClient {
                 successHandler(response)
             }
         } catch {
-            errorHandler(error)
+            let parsedError = parseError(data: data)
+            onMain {
+                errorHandler(parsedError)
+            }
+        }
+    }
+    
+    private class func parseError(data: Data) -> Error {
+        do {
+            return try JSONDecoder().decode(ErrorResponse.self, from: data)
+        } catch {
+            return error
         }
     }
     

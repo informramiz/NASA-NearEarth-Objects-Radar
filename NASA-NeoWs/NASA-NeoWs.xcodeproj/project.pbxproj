@@ -31,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18139FFC242AF4E10031F0F3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		18139FFE242AFA390031F0F3 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		182FABE4241E796A00388F3D /* NASA-NeoWs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-NeoWs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		182FABE7241E796A00388F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		182FABE9241E796A00388F3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				182FAC12241EE2A500388F3D /* Extensions */,
 				182FABEB241E796A00388F3D /* FeedViewController.swift */,
 				182FAC1A2422CB8A00388F3D /* DetailViewController.swift */,
+				18139FFC242AF4E10031F0F3 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				182FAC16241EE37300388F3D /* Date+Extras.swift in Sources */,
 				182FAC06241EC78F00388F3D /* CloseApproachData.swift in Sources */,
 				182FAC0C241EC7D400388F3D /* Asteriods.swift in Sources */,
+				18139FFD242AF4E10031F0F3 /* SearchViewController.swift in Sources */,
 				182FAC02241EC5E700388F3D /* RelativeVelocity.swift in Sources */,
 				182FABEC241E796A00388F3D /* FeedViewController.swift in Sources */,
 				182FAC04241EC60400388F3D /* MissDistance.swift in Sources */,

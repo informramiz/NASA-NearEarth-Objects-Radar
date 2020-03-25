@@ -62,8 +62,7 @@ class FeedViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! FeedTableViewCell
         let row = rowAt(indexPath)
-        tableViewCell.title.text = "\(row.name), \(row.neoReferenceId)"
-        tableViewCell.subtitle.text = "Absolute Magnitude: \(row.absoluteMagnitude), Orbiting Body: \(row.closeApproachData[0].orbitingBody)"
+        tableViewCell.bindData(row)
         return tableViewCell
     }
     
