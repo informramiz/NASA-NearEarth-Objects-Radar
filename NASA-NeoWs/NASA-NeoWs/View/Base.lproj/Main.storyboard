@@ -222,8 +222,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rp2-jR-lgc">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Favorite" image="heart_32" id="4RN-vv-NDg"/>
+                                </items>
+                            </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmB-Z7-lYa">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQx-8L-rGE">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="565"/>
@@ -288,8 +294,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="24l-UJ-tbU" firstAttribute="bottom" secondItem="rp2-jR-lgc" secondAttribute="bottom" id="1dt-bs-jCq"/>
+                            <constraint firstItem="rp2-jR-lgc" firstAttribute="trailing" secondItem="24l-UJ-tbU" secondAttribute="trailing" id="BAM-mv-BFo"/>
+                            <constraint firstItem="DmB-Z7-lYa" firstAttribute="bottom" secondItem="rp2-jR-lgc" secondAttribute="top" id="Fid-EO-t9W"/>
                             <constraint firstItem="24l-UJ-tbU" firstAttribute="trailing" secondItem="DmB-Z7-lYa" secondAttribute="trailing" id="LFd-hz-ERb"/>
-                            <constraint firstItem="24l-UJ-tbU" firstAttribute="bottom" secondItem="DmB-Z7-lYa" secondAttribute="bottom" id="cqK-Cl-far"/>
+                            <constraint firstItem="rp2-jR-lgc" firstAttribute="leading" secondItem="24l-UJ-tbU" secondAttribute="leading" id="foC-iY-pKf"/>
                             <constraint firstItem="DmB-Z7-lYa" firstAttribute="top" secondItem="24l-UJ-tbU" secondAttribute="top" id="nyg-js-YkJ"/>
                             <constraint firstItem="DmB-Z7-lYa" firstAttribute="leading" secondItem="24l-UJ-tbU" secondAttribute="leading" id="w9F-Jb-HhA"/>
                         </constraints>
@@ -344,6 +353,9 @@
             <point key="canvasLocation" x="817" y="92"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart_32" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xtR-zH-gjB"/>
     </inferredMetricsTieBreakers>
