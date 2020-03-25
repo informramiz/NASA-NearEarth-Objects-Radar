@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Asteriod" representedClassName="Asteriod" syncable="YES" codeGenerationType="class">
+        <attribute name="absoluteMagnitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isPotentiallyHazardousAsteriod" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="nasaJPLUrl" optional="YES" attributeType="String"/>
+        <attribute name="newReferenceId" optional="YES" attributeType="String"/>
+        <relationship name="closeApproachData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClosestApproachData" inverseName="asteriod" inverseEntity="ClosestApproachData"/>
+        <relationship name="estimatedDiameter" maxCount="1" deletionRule="Nullify" destinationEntity="EstimatedDiameter" inverseName="asteriod" inverseEntity="EstimatedDiameter"/>
+    </entity>
+    <entity name="ClosestApproachData" representedClassName="ClosestApproachData" syncable="YES" codeGenerationType="class">
+        <attribute name="closeApproachDate" optional="YES" attributeType="String"/>
+        <attribute name="closeApproachDateFull" optional="YES" attributeType="String"/>
+        <attribute name="epochDateCloseApproach" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="orbitingBody" optional="YES" attributeType="String"/>
+        <relationship name="asteriod" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Asteriod" inverseName="closeApproachData" inverseEntity="Asteriod"/>
+        <relationship name="missDistance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MissDistance" inverseName="closeApproachData" inverseEntity="MissDistance"/>
+        <relationship name="relativeVelocity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RelativeVelocity" inverseName="closeApproachData" inverseEntity="RelativeVelocity"/>
+    </entity>
+    <entity name="Diameter" representedClassName="Diameter" syncable="YES" codeGenerationType="class">
+        <attribute name="maxEstimatedDiameter" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="minEstimatedDiameter" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="estimatedDiameter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EstimatedDiameter" inverseName="kilometers" inverseEntity="EstimatedDiameter"/>
+    </entity>
+    <entity name="EstimatedDiameter" representedClassName="EstimatedDiameter" syncable="YES" codeGenerationType="class">
+        <relationship name="asteriod" maxCount="1" deletionRule="Nullify" destinationEntity="Asteriod" inverseName="estimatedDiameter" inverseEntity="Asteriod"/>
+        <relationship name="kilometers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Diameter" inverseName="estimatedDiameter" inverseEntity="Diameter"/>
+    </entity>
+    <entity name="MissDistance" representedClassName="MissDistance" syncable="YES" codeGenerationType="class">
+        <attribute name="kilometers" optional="YES"/>
+        <relationship name="closeApproachData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClosestApproachData" inverseName="missDistance" inverseEntity="ClosestApproachData"/>
+    </entity>
+    <entity name="RelativeVelocity" representedClassName="RelativeVelocity" syncable="YES" codeGenerationType="class">
+        <attribute name="kmPerSecond" optional="YES"/>
+        <relationship name="closeApproachData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClosestApproachData" inverseName="relativeVelocity" inverseEntity="ClosestApproachData"/>
+    </entity>
+    <elements>
+        <element name="Asteriod" positionX="-169.6875" positionY="-187.41796875" width="128" height="163"/>
+        <element name="EstimatedDiameter" positionX="-414.06640625" positionY="-86.375" width="128" height="73"/>
+        <element name="ClosestApproachData" positionX="-25.53125" positionY="-7.703125" width="128" height="148"/>
+        <element name="Diameter" positionX="-256.984375" positionY="73.28125" width="128" height="88"/>
+        <element name="RelativeVelocity" positionX="-90.74609375" positionY="96.61328125" width="128" height="73"/>
+        <element name="MissDistance" positionX="62.98828125" positionY="81.57421875" width="128" height="73"/>
+    </elements>
+</model>
