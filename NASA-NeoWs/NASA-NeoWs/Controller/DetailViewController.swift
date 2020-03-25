@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    var asteriod: Asteriod!
+    var asteriod: CoreDataAsteriod!
     @IBOutlet weak var primaryDataText: UITextView!
     @IBOutlet weak var secondaryDataTextView: UITextView!
     

@@ -66,3 +66,16 @@ struct Asteriod: Codable {
         return text
     }
 }
+
+extension Asteriod {
+    func toCoreDataAsteriod() -> CoreDataAsteriod {
+        let savedAsteriod = CoreDataAsteriod(context: DataController.shared.viewContext)
+        savedAsteriod.id = id
+        savedAsteriod.name = name
+        savedAsteriod.neoReferenceId = neoReferenceId
+        savedAsteriod.absoluteMagnitude = absoluteMagnitude
+        savedAsteriod.primaryDataAttributedString = primaryDataAttributedString
+        savedAsteriod.secondaryDataAttributedString = secondaryDataAttributedString
+        return savedAsteriod
+    }
+}

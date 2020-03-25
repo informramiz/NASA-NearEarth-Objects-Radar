@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		18139FFD242AF4E10031F0F3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18139FFC242AF4E10031F0F3 /* SearchViewController.swift */; };
 		18139FFF242AFA390031F0F3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18139FFE242AFA390031F0F3 /* ErrorResponse.swift */; };
+		1813A006242B24DF0031F0F3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813A005242B24DF0031F0F3 /* DataController.swift */; };
+		1813A00C242B35910031F0F3 /* NASA-Neos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1813A00A242B35910031F0F3 /* NASA-Neos.xcdatamodeld */; };
+		1813A00F242B374A0031F0F3 /* SavedAsteriod+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813A00E242B374A0031F0F3 /* SavedAsteriod+Extra.swift */; };
 		182FABE8241E796A00388F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABE7241E796A00388F3D /* AppDelegate.swift */; };
 		182FABEA241E796A00388F3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABE9241E796A00388F3D /* SceneDelegate.swift */; };
 		182FABEC241E796A00388F3D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABEB241E796A00388F3D /* FeedViewController.swift */; };
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		18139FFC242AF4E10031F0F3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		18139FFE242AFA390031F0F3 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		1813A005242B24DF0031F0F3 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		1813A00B242B35910031F0F3 /* NASA-Neos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "NASA-Neos.xcdatamodel"; sourceTree = "<group>"; };
+		1813A00E242B374A0031F0F3 /* SavedAsteriod+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedAsteriod+Extra.swift"; sourceTree = "<group>"; };
 		182FABE4241E796A00388F3D /* NASA-NeoWs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-NeoWs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		182FABE7241E796A00388F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		182FABE9241E796A00388F3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,24 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
+		1813A001242B20B10031F0F3 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				1813A00D242B372B0031F0F3 /* Model Extensions */,
+				1813A005242B24DF0031F0F3 /* DataController.swift */,
+				1813A00A242B35910031F0F3 /* NASA-Neos.xcdatamodeld */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		1813A00D242B372B0031F0F3 /* Model Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1813A00E242B374A0031F0F3 /* SavedAsteriod+Extra.swift */,
+			);
+			path = "Model Extensions";
+			sourceTree = "<group>";
+		};
 		182FABDB241E796A00388F3D = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +135,7 @@
 		182FABFB241EC34A00388F3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1813A001242B20B10031F0F3 /* Local */,
 				1813A000242B1DC70031F0F3 /* Remote */,
 				186506AE2429857A00DD6043 /* Extensions */,
 			);
@@ -270,6 +295,7 @@
 				182FAC0C241EC7D400388F3D /* Asteriods.swift in Sources */,
 				18139FFD242AF4E10031F0F3 /* SearchViewController.swift in Sources */,
 				182FAC02241EC5E700388F3D /* RelativeVelocity.swift in Sources */,
+				1813A006242B24DF0031F0F3 /* DataController.swift in Sources */,
 				182FABEC241E796A00388F3D /* FeedViewController.swift in Sources */,
 				182FAC04241EC60400388F3D /* MissDistance.swift in Sources */,
 				182FABE8241E796A00388F3D /* AppDelegate.swift in Sources */,
@@ -283,6 +309,8 @@
 				18139FFF242AFA390031F0F3 /* ErrorResponse.swift in Sources */,
 				182FAC11241EDFD300388F3D /* FeedTableViewCell.swift in Sources */,
 				182FAC1B2422CB8A00388F3D /* DetailViewController.swift in Sources */,
+				1813A00C242B35910031F0F3 /* NASA-Neos.xcdatamodeld in Sources */,
+				1813A00F242B374A0031F0F3 /* SavedAsteriod+Extra.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +508,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1813A00A242B35910031F0F3 /* NASA-Neos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1813A00B242B35910031F0F3 /* NASA-Neos.xcdatamodel */,
+			);
+			currentVersion = 1813A00B242B35910031F0F3 /* NASA-Neos.xcdatamodel */;
+			path = "NASA-Neos.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 182FABDC241E796A00388F3D /* Project object */;
 }

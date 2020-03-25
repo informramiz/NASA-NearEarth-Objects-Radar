@@ -61,7 +61,7 @@ class SearchViewController: UIViewController, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail" {
             let detailViewController = segue.destination as! DetailViewController
-            detailViewController.asteriod = (sender as! Asteriod)
+            detailViewController.asteriod = (sender as! Asteriod).toCoreDataAsteriod()
         }
     }
 }

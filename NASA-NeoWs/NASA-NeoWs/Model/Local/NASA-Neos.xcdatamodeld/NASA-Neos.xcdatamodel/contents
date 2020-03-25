@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreDataAsteriod" representedClassName="CoreDataAsteriod" syncable="YES" codeGenerationType="class">
+        <attribute name="absoluteMagnitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="neoReferenceId" optional="YES" attributeType="String"/>
+        <attribute name="primaryDataAttributedString" optional="YES" attributeType="Transformable" customClassName="NSAttributedString"/>
+        <attribute name="secondaryDataAttributedString" optional="YES" attributeType="Transformable" customClassName="NSAttributedString"/>
+    </entity>
+    <elements>
+        <element name="CoreDataAsteriod" positionX="-9" positionY="36" width="128" height="133"/>
+    </elements>
+</model>
