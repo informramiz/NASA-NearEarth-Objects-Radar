@@ -60,7 +60,7 @@ class FeedViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! FeedTableViewCell
+        let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! AsteriodTableViewCell
         let row = rowAt(indexPath)
         tableViewCell.bindData(row)
         return tableViewCell

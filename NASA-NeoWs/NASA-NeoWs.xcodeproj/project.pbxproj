@@ -11,7 +11,9 @@
 		18139FFF242AFA390031F0F3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18139FFE242AFA390031F0F3 /* ErrorResponse.swift */; };
 		1813A006242B24DF0031F0F3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813A005242B24DF0031F0F3 /* DataController.swift */; };
 		1813A00C242B35910031F0F3 /* NASA-Neos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1813A00A242B35910031F0F3 /* NASA-Neos.xcdatamodeld */; };
-		1813A00F242B374A0031F0F3 /* SavedAsteriod+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813A00E242B374A0031F0F3 /* SavedAsteriod+Extra.swift */; };
+		1813A011242B39470031F0F3 /* CoreDataAsteriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813A010242B39470031F0F3 /* CoreDataAsteriod.swift */; };
+		1813A014242B39F50031F0F3 /* CommonListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813A013242B39F50031F0F3 /* CommonListDataSource.swift */; };
+		1813A016242B3A640031F0F3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813A015242B3A640031F0F3 /* FavoritesViewController.swift */; };
 		182FABE8241E796A00388F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABE7241E796A00388F3D /* AppDelegate.swift */; };
 		182FABEA241E796A00388F3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABE9241E796A00388F3D /* SceneDelegate.swift */; };
 		182FABEC241E796A00388F3D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABEB241E796A00388F3D /* FeedViewController.swift */; };
@@ -25,7 +27,7 @@
 		182FAC0A241EC7BE00388F3D /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC09241EC7BE00388F3D /* Links.swift */; };
 		182FAC0C241EC7D400388F3D /* Asteriods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC0B241EC7D400388F3D /* Asteriods.swift */; };
 		182FAC0E241EC80000388F3D /* NASAAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC0D241EC80000388F3D /* NASAAPIClient.swift */; };
-		182FAC11241EDFD300388F3D /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC10241EDFD300388F3D /* FeedTableViewCell.swift */; };
+		182FAC11241EDFD300388F3D /* AsteriodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC10241EDFD300388F3D /* AsteriodTableViewCell.swift */; };
 		182FAC14241EE2B700388F3D /* UIViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC13241EE2B700388F3D /* UIViewController+Extras.swift */; };
 		182FAC16241EE37300388F3D /* Date+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC15241EE37300388F3D /* Date+Extras.swift */; };
 		182FAC1B2422CB8A00388F3D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FAC1A2422CB8A00388F3D /* DetailViewController.swift */; };
@@ -38,7 +40,9 @@
 		18139FFE242AFA390031F0F3 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		1813A005242B24DF0031F0F3 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		1813A00B242B35910031F0F3 /* NASA-Neos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "NASA-Neos.xcdatamodel"; sourceTree = "<group>"; };
-		1813A00E242B374A0031F0F3 /* SavedAsteriod+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedAsteriod+Extra.swift"; sourceTree = "<group>"; };
+		1813A010242B39470031F0F3 /* CoreDataAsteriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAsteriod.swift; sourceTree = "<group>"; };
+		1813A013242B39F50031F0F3 /* CommonListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonListDataSource.swift; sourceTree = "<group>"; };
+		1813A015242B3A640031F0F3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		182FABE4241E796A00388F3D /* NASA-NeoWs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-NeoWs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		182FABE7241E796A00388F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		182FABE9241E796A00388F3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +59,7 @@
 		182FAC09241EC7BE00388F3D /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		182FAC0B241EC7D400388F3D /* Asteriods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteriods.swift; sourceTree = "<group>"; };
 		182FAC0D241EC80000388F3D /* NASAAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAPIClient.swift; sourceTree = "<group>"; };
-		182FAC10241EDFD300388F3D /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		182FAC10241EDFD300388F3D /* AsteriodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteriodTableViewCell.swift; sourceTree = "<group>"; };
 		182FAC13241EE2B700388F3D /* UIViewController+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extras.swift"; sourceTree = "<group>"; };
 		182FAC15241EE37300388F3D /* Date+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extras.swift"; sourceTree = "<group>"; };
 		182FAC1A2422CB8A00388F3D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -97,9 +101,17 @@
 		1813A00D242B372B0031F0F3 /* Model Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1813A00E242B374A0031F0F3 /* SavedAsteriod+Extra.swift */,
+				1813A010242B39470031F0F3 /* CoreDataAsteriod.swift */,
 			);
 			path = "Model Extensions";
+			sourceTree = "<group>";
+		};
+		1813A012242B39E10031F0F3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1813A013242B39F50031F0F3 /* CommonListDataSource.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		182FABDB241E796A00388F3D = {
@@ -156,10 +168,12 @@
 		182FABFD241EC35700388F3D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1813A012242B39E10031F0F3 /* Common */,
 				182FAC12241EE2A500388F3D /* Extensions */,
 				182FABEB241E796A00388F3D /* FeedViewController.swift */,
 				182FAC1A2422CB8A00388F3D /* DetailViewController.swift */,
 				18139FFC242AF4E10031F0F3 /* SearchViewController.swift */,
+				1813A015242B3A640031F0F3 /* FavoritesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,7 +205,7 @@
 		182FAC0F241EDFB900388F3D /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				182FAC10241EDFD300388F3D /* FeedTableViewCell.swift */,
+				182FAC10241EDFD300388F3D /* AsteriodTableViewCell.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -297,6 +311,7 @@
 				182FAC02241EC5E700388F3D /* RelativeVelocity.swift in Sources */,
 				1813A006242B24DF0031F0F3 /* DataController.swift in Sources */,
 				182FABEC241E796A00388F3D /* FeedViewController.swift in Sources */,
+				1813A011242B39470031F0F3 /* CoreDataAsteriod.swift in Sources */,
 				182FAC04241EC60400388F3D /* MissDistance.swift in Sources */,
 				182FABE8241E796A00388F3D /* AppDelegate.swift in Sources */,
 				182FAC08241EC7A400388F3D /* Asteriod.swift in Sources */,
@@ -307,10 +322,11 @@
 				18450D6E242828490022F60C /* Diameter.swift in Sources */,
 				18450D6C242827D90022F60C /* EstimatedDiameter.swift in Sources */,
 				18139FFF242AFA390031F0F3 /* ErrorResponse.swift in Sources */,
-				182FAC11241EDFD300388F3D /* FeedTableViewCell.swift in Sources */,
+				182FAC11241EDFD300388F3D /* AsteriodTableViewCell.swift in Sources */,
 				182FAC1B2422CB8A00388F3D /* DetailViewController.swift in Sources */,
+				1813A016242B3A640031F0F3 /* FavoritesViewController.swift in Sources */,
 				1813A00C242B35910031F0F3 /* NASA-Neos.xcdatamodeld in Sources */,
-				1813A00F242B374A0031F0F3 /* SavedAsteriod+Extra.swift in Sources */,
+				1813A014242B39F50031F0F3 /* CommonListDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

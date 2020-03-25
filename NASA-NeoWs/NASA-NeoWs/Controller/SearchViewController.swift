@@ -53,7 +53,7 @@ class SearchViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! FeedTableViewCell
+        let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! AsteriodTableViewCell
         tableViewCell.bindData(results[0])
         return tableViewCell
     }
@@ -79,17 +79,6 @@ extension SearchViewController: UISearchBarDelegate {
             self.setSearching(searching: false)
             print(error.localizedDescription)
         }
-    }
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-//        searchBar.showsCancelButton = false
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//        searchBar.endEditing(true)
-    }
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-//        searchBar.showsCancelButton = true
     }
 }
 

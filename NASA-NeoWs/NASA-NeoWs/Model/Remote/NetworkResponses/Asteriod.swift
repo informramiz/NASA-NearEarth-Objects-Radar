@@ -74,6 +74,7 @@ extension Asteriod {
         savedAsteriod.name = name
         savedAsteriod.neoReferenceId = neoReferenceId
         savedAsteriod.absoluteMagnitude = absoluteMagnitude
+        savedAsteriod.estimatedDiameter = estimatedDiameter.toString()
         savedAsteriod.primaryDataAttributedString = primaryDataAttributedString
         savedAsteriod.secondaryDataAttributedString = secondaryDataAttributedString
         return savedAsteriod

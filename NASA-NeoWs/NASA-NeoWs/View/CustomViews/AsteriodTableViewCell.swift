@@ -9,12 +9,17 @@
 import Foundation
 import UIKit
 
-class FeedTableViewCell: UITableViewCell {
+class AsteriodTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var subtitle: UILabel!
     
     func bindData(_ asteriod: Asteriod) {
         title.text = "\(asteriod.name), \(asteriod.neoReferenceId)"
         subtitle.text = "Absolute Magnitude: \(asteriod.absoluteMagnitude), Diameter: \(asteriod.estimatedDiameter.toString())"
+    }
+    
+    func bindData(_ asteriod: CoreDataAsteriod) {
+        title.text = "\(asteriod.name), \(asteriod.neoReferenceId)"
+        subtitle.text = "Absolute Magnitude: \(asteriod.absoluteMagnitude), Diameter: \(asteriod.estimatedDiameter)"
     }
 }

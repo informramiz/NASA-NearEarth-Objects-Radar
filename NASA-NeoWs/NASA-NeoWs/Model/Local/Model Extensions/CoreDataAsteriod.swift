@@ -1,5 +1,5 @@
 //
-//  SavedAsteriod+Extra.swift
+//  CoreDataAsteriod.swift
 //  NASA-NeoWs
 //
 //  Created by Apple on 25/03/2020.
@@ -7,6 +7,11 @@
 //
 
 import Foundation
+import CoreData
+
 extension CoreDataAsteriod {
-   
+    public override func awakeFromInsert() {
+        super.awakeFromInsert()
+        saveDate = Date()
+    }
 }
