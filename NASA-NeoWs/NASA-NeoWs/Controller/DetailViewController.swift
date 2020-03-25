@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  NASA-NeoWs
 //
-//  Created by Apple on 19/03/2020.
+//  Created by Ramiz on 19/03/2020.
 //  Copyright © 2020 RR Inc. All rights reserved.
 //
 
@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     var asteriod: CoreDataAsteriod!
     @IBOutlet weak var primaryDataText: UITextView!
     @IBOutlet weak var secondaryDataTextView: UITextView!
+    @IBOutlet weak var favoriteButtonItem: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +23,31 @@ class DetailViewController: UIViewController {
       
         secondaryDataTextView.attributedText = asteriod.secondaryDataAttributedString
         secondaryDataTextView.isEditable = false
+        toggleBarButton(favoriteButtonItem, isColored: asteriod.isAlreadySaved)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onFavoriteButtonClick(_ sender: Any) {
+        saveOrDeleteAsteriodLocally()
     }
-    */
-
+    
+    private func saveOrDeleteAsteriodLocally() {
+        toggleBarButton(favoriteButtonItem, isColored: !asteriod.isAlreadySaved)
+        if asteriod.isAlreadySaved {
+            DataController.shared.viewContext.delete(asteriod)
+        } else {
+            do {
+                try DataController.shared.viewContext.save()
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func toggleBarButton(_ button: UIBarButtonItem, isColored: Bool) {
+        if isColored {
+            button.tintColor = UIColor.primaryDark
+        } else {
+            button.tintColor = UIColor.gray
+        }
+    }
 }

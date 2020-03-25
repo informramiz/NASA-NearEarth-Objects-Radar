@@ -7,7 +7,7 @@
         <attribute name="name" attributeType="String"/>
         <attribute name="neoReferenceId" attributeType="String" defaultValueString=""/>
         <attribute name="primaryDataAttributedString" attributeType="Transformable" customClassName="NSAttributedString"/>
-        <attribute name="saveDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="saveDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="secondaryDataAttributedString" attributeType="Transformable" customClassName="NSAttributedString"/>
     </entity>
     <elements>

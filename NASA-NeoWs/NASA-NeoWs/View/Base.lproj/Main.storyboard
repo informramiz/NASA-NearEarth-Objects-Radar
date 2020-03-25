@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FeedTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedTableViewCell" textLabel="8lR-i6-uvp" detailTextLabel="5JM-U2-bht" style="IBUITableViewCellStyleSubtitle" id="f59-Ru-aJx" customClass="AsteriodTableViewCell" customModule="NASA_NeoWs" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AsteriodTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AsteriodTableViewCell" textLabel="8lR-i6-uvp" detailTextLabel="5JM-U2-bht" style="IBUITableViewCellStyleSubtitle" id="f59-Ru-aJx" customClass="AsteriodTableViewCell" customModule="NASA_NeoWs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f59-Ru-aJx" id="r1m-QS-xQ7">
@@ -105,7 +105,7 @@
                                 <color key="sectionIndexBackgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FeedTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedTableViewCell" textLabel="jck-lF-6hh" detailTextLabel="jhY-os-57y" style="IBUITableViewCellStyleSubtitle" id="ygo-ck-Ruo" customClass="AsteriodTableViewCell" customModule="NASA_NeoWs" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AsteriodTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AsteriodTableViewCell" textLabel="jck-lF-6hh" detailTextLabel="jhY-os-57y" style="IBUITableViewCellStyleSubtitle" id="ygo-ck-Ruo" customClass="AsteriodTableViewCell" customModule="NASA_NeoWs" customModuleProvider="target">
                                         <rect key="frame" x="20" y="55.5" width="374" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ygo-ck-Ruo" id="x2r-fS-r45">
@@ -171,7 +171,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FeedTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedTableViewCell" textLabel="yR3-7B-WCH" detailTextLabel="kcF-mf-j8j" style="IBUITableViewCellStyleSubtitle" id="Jaj-DZ-Gb7" customClass="AsteriodTableViewCell" customModule="NASA_NeoWs" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AsteriodTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AsteriodTableViewCell" textLabel="yR3-7B-WCH" detailTextLabel="kcF-mf-j8j" style="IBUITableViewCellStyleSubtitle" id="Jaj-DZ-Gb7" customClass="AsteriodTableViewCell" customModule="NASA_NeoWs" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jaj-DZ-Gb7" id="1gH-Yp-vPe">
@@ -225,7 +225,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rp2-jR-lgc">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Favorite" image="heart_32" id="4RN-vv-NDg"/>
+                                    <barButtonItem title="Favorite" image="heart_32" id="4RN-vv-NDg">
+                                        <connections>
+                                            <action selector="onFavoriteButtonClick:" destination="kSl-QG-bXQ" id="fhF-Ns-PUs"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmB-Z7-lYa">
@@ -306,6 +310,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Asteriod Detail" id="6lt-2S-bzj"/>
                     <connections>
+                        <outlet property="favoriteButtonItem" destination="4RN-vv-NDg" id="4m5-RG-0aw"/>
                         <outlet property="primaryDataText" destination="ibO-iz-VBK" id="Gkr-9z-sOP"/>
                         <outlet property="secondaryDataTextView" destination="J4m-We-wLY" id="sk0-HK-iIK"/>
                     </connections>
@@ -357,6 +362,6 @@
         <image name="heart_32" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xtR-zH-gjB"/>
+        <segue reference="TJ6-Zc-wdl"/>
     </inferredMetricsTieBreakers>
 </document>

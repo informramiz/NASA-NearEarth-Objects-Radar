@@ -14,6 +14,8 @@
 		1813A011242B39470031F0F3 /* CoreDataAsteriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813A010242B39470031F0F3 /* CoreDataAsteriod.swift */; };
 		1813A014242B39F50031F0F3 /* CommonListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813A013242B39F50031F0F3 /* CommonListDataSource.swift */; };
 		1813A016242B3A640031F0F3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813A015242B3A640031F0F3 /* FavoritesViewController.swift */; };
+		18172D16242B45A200793976 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18172D15242B45A200793976 /* Colors.xcassets */; };
+		18172D18242B46E900793976 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18172D17242B46E900793976 /* UIColor+Extra.swift */; };
 		182FABE8241E796A00388F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABE7241E796A00388F3D /* AppDelegate.swift */; };
 		182FABEA241E796A00388F3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABE9241E796A00388F3D /* SceneDelegate.swift */; };
 		182FABEC241E796A00388F3D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FABEB241E796A00388F3D /* FeedViewController.swift */; };
@@ -43,6 +45,8 @@
 		1813A010242B39470031F0F3 /* CoreDataAsteriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAsteriod.swift; sourceTree = "<group>"; };
 		1813A013242B39F50031F0F3 /* CommonListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonListDataSource.swift; sourceTree = "<group>"; };
 		1813A015242B3A640031F0F3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		18172D15242B45A200793976 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		18172D17242B46E900793976 /* UIColor+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extra.swift"; sourceTree = "<group>"; };
 		182FABE4241E796A00388F3D /* NASA-NeoWs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-NeoWs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		182FABE7241E796A00388F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		182FABE9241E796A00388F3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		18172D14242B44EE00793976 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				182FABF0241E796C00388F3D /* Assets.xcassets */,
+				18172D15242B45A200793976 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		182FABDB241E796A00388F3D = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +151,7 @@
 				182FABFD241EC35700388F3D /* Controller */,
 				182FABFC241EC35100388F3D /* View */,
 				182FABFB241EC34A00388F3D /* Model */,
-				182FABF0241E796C00388F3D /* Assets.xcassets */,
+				18172D14242B44EE00793976 /* Assets */,
 				182FABF5241E796C00388F3D /* Info.plist */,
 			);
 			path = "NASA-NeoWs";
@@ -222,6 +235,7 @@
 		182FAC172421745D00388F3D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				18172D17242B46E900793976 /* UIColor+Extra.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182FABF4241E796C00388F3D /* LaunchScreen.storyboard in Resources */,
+				18172D16242B45A200793976 /* Colors.xcassets in Resources */,
 				182FABF1241E796C00388F3D /* Assets.xcassets in Resources */,
 				182FABEF241E796A00388F3D /* Main.storyboard in Resources */,
 			);
@@ -314,6 +329,7 @@
 				1813A011242B39470031F0F3 /* CoreDataAsteriod.swift in Sources */,
 				182FAC04241EC60400388F3D /* MissDistance.swift in Sources */,
 				182FABE8241E796A00388F3D /* AppDelegate.swift in Sources */,
+				18172D18242B46E900793976 /* UIColor+Extra.swift in Sources */,
 				182FAC08241EC7A400388F3D /* Asteriod.swift in Sources */,
 				182FAC14241EE2B700388F3D /* UIViewController+Extras.swift in Sources */,
 				182FABEA241E796A00388F3D /* SceneDelegate.swift in Sources */,

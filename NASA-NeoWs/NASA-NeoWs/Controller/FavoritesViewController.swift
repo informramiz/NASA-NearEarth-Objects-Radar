@@ -21,13 +21,15 @@ class FavoritesViewController: UITableViewController {
         dataSource = CommonListDataSource(tableView: tableView, viewContext: DataController.shared.viewContext, fetchRequest: fetchRequest, configureCell: { (cell, coreDataAsteriod) in
             cell.bindData(coreDataAsteriod)
         })
+        tableView.delegate = self
+        dataSource.loadData()
         // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail" {
             let detailViewController = segue.destination as! DetailViewController
-            detailViewController.asteriod = (sender as! Asteriod).toCoreDataAsteriod()
+            detailViewController.asteriod = (sender as! CoreDataAsteriod)
         }
     }
     

@@ -10,6 +10,9 @@ import Foundation
 import CoreData
 
 extension CoreDataAsteriod {
+    var isAlreadySaved: Bool {
+        return !self.hasChanges
+    }
     public override func awakeFromInsert() {
         super.awakeFromInsert()
         saveDate = Date()

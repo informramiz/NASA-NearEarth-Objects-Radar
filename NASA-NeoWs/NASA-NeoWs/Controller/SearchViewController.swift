@@ -53,7 +53,7 @@ class SearchViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! AsteriodTableViewCell
+        let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "AsteriodTableViewCell") as! AsteriodTableViewCell
         tableViewCell.bindData(results[0])
         return tableViewCell
     }
