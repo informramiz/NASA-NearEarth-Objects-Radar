@@ -9,3 +9,8 @@ The app allows a user to
 
 
 ![demo-gif](demo/neo-2.gif)
+
+
+## Requirements
+
+The App is built with latest stable `xCode Version 11.4 (11E146)` and requires at least iOS 13 as its deployment target.
