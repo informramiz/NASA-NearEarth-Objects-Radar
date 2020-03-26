@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import CoreData
+
 struct Asteriod: Codable {
     let id: String
     let name: String
@@ -69,6 +71,10 @@ struct Asteriod: Codable {
 
 extension Asteriod {
     func toCoreDataAsteriod() -> CoreDataAsteriod {
+        return getFromCoreData() ?? createCoreDataAsteriodFromScratch()
+    }
+    
+    private func createCoreDataAsteriodFromScratch() -> CoreDataAsteriod {
         let savedAsteriod = CoreDataAsteriod(context: DataController.shared.viewContext)
         savedAsteriod.id = id
         savedAsteriod.name = name
@@ -78,5 +84,21 @@ extension Asteriod {
         savedAsteriod.primaryDataAttributedString = primaryDataAttributedString
         savedAsteriod.secondaryDataAttributedString = secondaryDataAttributedString
         return savedAsteriod
+    }
+    
+    private func getFromCoreData() -> CoreDataAsteriod? {
+        let fetchRequest: NSFetchRequest<CoreDataAsteriod> = CoreDataAsteriod.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+        do {
+            let asteriods = try DataController.shared.viewContext.fetch(fetchRequest)
+            if asteriods.isEmpty {
+                return nil
+            }
+            
+            return asteriods[0]
+        } catch {
+            print(error)
+            return nil
+        }
     }
 }

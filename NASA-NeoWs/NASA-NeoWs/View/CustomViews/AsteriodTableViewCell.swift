@@ -19,7 +19,7 @@ class AsteriodTableViewCell: UITableViewCell {
     }
     
     func bindData(_ asteriod: CoreDataAsteriod) {
-        title.text = "\(asteriod.name), \(asteriod.neoReferenceId)"
-        subtitle.text = "Absolute Magnitude: \(asteriod.absoluteMagnitude), Diameter: \(asteriod.estimatedDiameter)"
+        title.text = "\(asteriod.name ?? ""), \(asteriod.neoReferenceId ?? "")"
+        subtitle.text = "Absolute Magnitude: \(asteriod.absoluteMagnitude), Diameter: \(asteriod.estimatedDiameter ?? "")"
     }
 }

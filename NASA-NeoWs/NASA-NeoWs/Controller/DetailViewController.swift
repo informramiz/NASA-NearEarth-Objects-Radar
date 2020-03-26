@@ -23,31 +23,47 @@ class DetailViewController: UIViewController {
       
         secondaryDataTextView.attributedText = asteriod.secondaryDataAttributedString
         secondaryDataTextView.isEditable = false
-        toggleBarButton(favoriteButtonItem, isColored: asteriod.isAlreadySaved)
+        toggleFavoriteButton(isColored: asteriod.isAlreadySaved)
     }
     
     @IBAction func onFavoriteButtonClick(_ sender: Any) {
-        saveOrDeleteAsteriodLocally()
+        if favoriteButtonItem.tintColor == UIColor.primaryDark {
+            toggleFavoriteButton(isColored: false)
+            deleteAsteriod()
+        } else {
+            toggleFavoriteButton(isColored: true)
+            saveAsteriodLocally()
+        }
     }
     
-    private func saveOrDeleteAsteriodLocally() {
-        toggleBarButton(favoriteButtonItem, isColored: !asteriod.isAlreadySaved)
-        if asteriod.isAlreadySaved {
+    private func deleteAsteriod() {
+        do {
             DataController.shared.viewContext.delete(asteriod)
-        } else {
-            do {
-                try DataController.shared.viewContext.save()
-            } catch {
-                print(error)
-            }
+            try DataController.shared.viewContext.save()
+        } catch {
+            print(error)
         }
     }
     
-    func toggleBarButton(_ button: UIBarButtonItem, isColored: Bool) {
-        if isColored {
-            button.tintColor = UIColor.primaryDark
-        } else {
-            button.tintColor = UIColor.gray
+    private func saveAsteriodLocally() {
+        do {
+            try DataController.shared.viewContext.save()
+        } catch {
+            print(error)
         }
+    }
+    
+    func toggleFavoriteButton(isColored: Bool) {
+        if isColored {
+            favoriteButtonItem.tintColor = UIColor.primaryDark
+        } else {
+            favoriteButtonItem.tintColor = UIColor.gray
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+//        asteriod = nil
+        DataController.shared.viewContext.reset()
     }
 }

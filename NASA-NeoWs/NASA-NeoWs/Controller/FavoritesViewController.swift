@@ -18,12 +18,22 @@ class FavoritesViewController: UITableViewController {
         
         fetchRequest = CoreDataAsteriod.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "saveDate", ascending: true)]
+        tableView.delegate = self
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         dataSource = CommonListDataSource(tableView: tableView, viewContext: DataController.shared.viewContext, fetchRequest: fetchRequest, configureCell: { (cell, coreDataAsteriod) in
             cell.bindData(coreDataAsteriod)
         })
-        tableView.delegate = self
         dataSource.loadData()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        dataSource = nil
+        tableView.dataSource = nil
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
